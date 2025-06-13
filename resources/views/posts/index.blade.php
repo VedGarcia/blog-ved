@@ -1,7 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight flex items-center justify-between">
             {{ __('Posts') }}
+            <a href="{{route('posts.create')}}"
+              class=" text-xs dark:text-stone-400 cursor-pointer border dark:bg-gray-300 rounded px-2 py-1">
+              Crear
+            </a>
         </h2>
     </x-slot>
 
@@ -15,7 +19,7 @@
                             <tr class="border_b dark:border-gray-200">
                                 <td class="px-6 py-4">{{ $post->title }}</td>
                                 <td class="px-6 py-4">
-                                    <a href="" class="dark:text-indigo-300">Editar</a>
+                                    <a href="{{route('posts.edit', $post)}}" class="dark:text-indigo-300">Editar</a>
                                 </td>
                                 <td class="px-6 py-4">
                                     <form action="{{ route('posts.destroy', $post) }}" method="POST">
@@ -25,7 +29,7 @@
                                         <input
                                           type="submit"
                                           value="Eliminar" 
-                                          class="bg-gray-300 text-stone-800 rounded px-4 py-2"
+                                          class="cursor-pointer border dark:bg-gray-300 dark:text-stone-800 rounded px-4 py-1"
                                           onclick="return confirm('¿desea eliminar?')"
                                           >
                                     </form>
