@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight flex items-center justify-between">
             {{ __('Posts') }}
             <a href="{{route('posts.create')}}"
-              class=" text-xs dark:text-stone-400 cursor-pointer border dark:bg-gray-300 rounded px-2 py-1">
+              class=" text-sm dark:text-cyan-300 cursor-pointer border dark:bg-none rounded px-2 py-1">
               Crear
             </a>
         </h2>
