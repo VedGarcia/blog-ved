@@ -56,7 +56,9 @@ class PostController extends Controller
             'slug' =>  $request->slug,
             'body' =>  $request->body
         ]);
-        return redirect()->route('posts.edit', $post);
+        return view('posts.index', [
+            'posts' => Post::latest()->paginate()
+        ]);
     }
 
      public function destroy(Post $post)
