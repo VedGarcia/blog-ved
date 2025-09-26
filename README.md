@@ -38,7 +38,7 @@ Puedes ver todas las dependencias y versiones en [composer.json](composer.json) 
 1. **Clona el repositorio**
 
     ```sh
-    git clone [<blog-ved>](https://github.com/VedGarcia/blog-ved.git)
+    git clone [\[<blog-ved>\]()](https://github.com/VedGarcia/blog-ved.git)
     cd
     ```
 
